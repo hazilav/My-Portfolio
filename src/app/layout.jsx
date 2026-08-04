@@ -2,7 +2,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsapp from "@/components/FloatingWhatsapp";
-import StickyMobileCta from "@/components/StickyMobileCta";
 import { personalInfo } from "@/data/resumeData";
 
 export const metadata = {
@@ -55,7 +54,6 @@ export default function RootLayout({ children }) {
         <main className="min-h-screen">{children}</main>
         <Footer />
         <FloatingWhatsapp />
-        <StickyMobileCta />
       </body>
     </html>
   );
