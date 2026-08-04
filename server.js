@@ -350,7 +350,7 @@ function getHtmlHeader(title) {
         <a href="/#works" class="hover:text-white transition-colors">WORK COLLECTIONS</a>
         <a href="/#services" class="hover:text-white transition-colors">PORTFOLIO</a>
       </nav>
-      <a href="/#contact" class="px-6 py-2 rounded-full text-xs font-bold tracking-wider uppercase text-white border border-white/40 hover:bg-white hover:text-black transition-all">CONTACT</a>
+      <a href="${personalInfo.whatsapp}" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-gradient-to-r from-[#0B6CFF] to-[#00BFFF] hover:shadow-lg transition-all flex items-center gap-1.5"><span>WHATSAPP</span> ↗</a>
     </div>
   </header>
 `;

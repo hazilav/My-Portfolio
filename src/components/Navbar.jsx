@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight, MessageSquare } from "lucide-react";
+import { Menu, X, ArrowUpRight, MessageSquare, MessageCircle } from "lucide-react";
 import { personalInfo } from "@/data/resumeData";
 
 export default function Navbar() {
@@ -96,13 +96,16 @@ export default function Navbar() {
 
         {/* Right Action CTA Button */}
         <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="/#contact"
+          <a
+            href={personalInfo.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#0B6CFF] to-[#00BFFF] hover:shadow-glow transition-all duration-300"
           >
-            <span>Get in Touch</span>
+            <MessageCircle className="w-4 h-4 fill-current text-white" />
+            <span>WhatsApp</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Hamburger Toggle Button */}
@@ -139,14 +142,16 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-2 flex flex-col gap-3">
-                <Link
-                  href="/#contact"
+                <a
+                  href={personalInfo.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-[#0B6CFF] to-[#00BFFF] text-white font-semibold text-center shadow-glow"
                 >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>Contact Me</span>
-                </Link>
+                  <MessageCircle className="w-4 h-4 fill-current text-white" />
+                  <span>WhatsApp</span>
+                </a>
               </div>
             </div>
           </motion.div>
