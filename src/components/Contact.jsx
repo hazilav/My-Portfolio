@@ -60,67 +60,69 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
           {/* Left Column: Direct Contact Info & Socials */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="glass-card p-8 rounded-3xl border border-white/10 flex flex-col gap-6">
-              <h3 className="font-bebas text-3xl text-white tracking-wide">
-                CONTACT DETAILS
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                Reach out for freelance project bookings, website redesign audits, or strategic digital marketing consultation.
-              </p>
+          <div className="lg:col-span-5 flex flex-col">
+            <div className="glass-card h-full p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+              <div className="flex flex-col gap-4">
+                <h3 className="font-bebas text-3xl text-white tracking-wide">
+                  CONTACT DETAILS
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                  Reach out for freelance project bookings, website redesign audits, or strategic digital marketing consultation.
+                </p>
 
-              <div className="space-y-4 pt-2">
-                {/* Email */}
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-[#05070B] border border-white/10 hover:border-[#0B6CFF]/50 transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-[#0B6CFF]/15 flex items-center justify-center text-[#00BFFF] group-hover:scale-110 transition-transform">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-[11px] text-gray-400 font-medium">Email Address</div>
-                    <div className="text-sm font-semibold text-white group-hover:text-[#00BFFF] transition-colors">
-                      {personalInfo.email}
+                <div className="space-y-4 pt-2">
+                  {/* Email */}
+                  <a
+                    href={`mailto:${personalInfo.email}`}
+                    className="flex items-center gap-4 p-4 rounded-2xl bg-[#05070B] border border-white/10 hover:border-[#0B6CFF]/50 transition-colors group"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-[#0B6CFF]/15 flex items-center justify-center text-[#00BFFF] group-hover:scale-110 transition-transform shrink-0">
+                      <Mail className="w-5 h-5" />
                     </div>
-                  </div>
-                </a>
-
-                {/* Phone / WhatsApp */}
-                <a
-                  href={personalInfo.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-[#05070B] border border-white/10 hover:border-[#0B6CFF]/50 transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-[#0B6CFF]/15 flex items-center justify-center text-[#00BFFF] group-hover:scale-110 transition-transform">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-[11px] text-gray-400 font-medium">Phone / WhatsApp</div>
-                    <div className="text-sm font-semibold text-white group-hover:text-[#00BFFF] transition-colors">
-                      {personalInfo.phone}
+                    <div className="min-w-0">
+                      <div className="text-[11px] text-gray-400 font-medium">Email Address</div>
+                      <div className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#00BFFF] transition-colors truncate">
+                        {personalInfo.email}
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
 
-                {/* Location */}
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#05070B] border border-white/10">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B6CFF]/15 flex items-center justify-center text-[#00BFFF]">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-[11px] text-gray-400 font-medium">Location</div>
-                    <div className="text-sm font-semibold text-white">{personalInfo.location}</div>
+                  {/* Phone / WhatsApp */}
+                  <a
+                    href={personalInfo.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-2xl bg-[#05070B] border border-white/10 hover:border-[#0B6CFF]/50 transition-colors group"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-[#0B6CFF]/15 flex items-center justify-center text-[#00BFFF] group-hover:scale-110 transition-transform shrink-0">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-[11px] text-gray-400 font-medium">Phone / WhatsApp</div>
+                      <div className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#00BFFF] transition-colors">
+                        {personalInfo.phone}
+                      </div>
+                    </div>
+                  </a>
+
+                  {/* Location */}
+                  <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#05070B] border border-white/10">
+                    <div className="w-10 h-10 rounded-xl bg-[#0B6CFF]/15 flex items-center justify-center text-[#00BFFF] shrink-0">
+                      <MapPin className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-[11px] text-gray-400 font-medium">Location</div>
+                      <div className="text-xs sm:text-sm font-semibold text-white">{personalInfo.location}</div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Social Channels */}
-              <div className="pt-4 border-t border-white/10">
+              <div className="pt-6 mt-6 border-t border-white/10">
                 <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-3">
                   Connect on Social Platforms
                 </span>
@@ -158,8 +160,8 @@ export default function Contact() {
           </div>
 
           {/* Right Column: Working Contact Form */}
-          <div className="lg:col-span-7">
-            <div className="glass-card p-8 rounded-3xl border border-white/10 relative">
+          <div className="lg:col-span-7 flex flex-col">
+            <div className="glass-card h-full p-8 rounded-3xl border border-white/10 flex flex-col justify-between relative">
               <h3 className="font-bebas text-3xl text-white tracking-wide mb-6">
                 SEND A DIRECT MESSAGE
               </h3>

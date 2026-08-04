@@ -666,32 +666,103 @@ function renderHomePage() {
 
   <!-- Contact Section -->
   <section id="contact" class="py-24 bg-[#0A0B0E] border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl glass-card p-8 sm:p-12 rounded-3xl">
-      <div class="text-center mb-8">
-        <h2 class="font-bebas text-5xl text-white">DIRECT CONTACT PAGE</h2>
-        <p class="text-gray-400 text-xs">Fill in your name, email, phone number, and project inquiry below.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-2">GET IN TOUCH</span>
+        <h2 class="font-bebas text-5xl sm:text-6xl text-white tracking-wide">LET'S BUILD SOMETHING <span class="text-gray-400">EXTRAORDINARY</span></h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-xs sm:text-sm mt-2">Have a new project, redesign inquiry, or growth strategy in mind? Send a message or connect directly.</p>
       </div>
-      <form onsubmit="event.preventDefault(); window.open('https://wa.me/919539933265?text=' + encodeURIComponent('Direct Inquiry from Website\\nName: ' + this.name.value + '\\nEmail: ' + this.email.value + '\\nPhone: ' + this.phone.value + '\\nMessage: ' + this.message.value), '_blank');" class="space-y-4">
-        <div>
-          <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Your Full Name</label>
-          <input type="text" name="name" required placeholder="John Doe" class="w-full p-3.5 rounded-xl bg-[#0A0B0E] border border-white/10 text-white text-xs">
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Email Address</label>
-            <input type="email" name="email" required placeholder="john@example.com" class="w-full p-3.5 rounded-xl bg-[#0A0B0E] border border-white/10 text-white text-xs">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        
+        <!-- Left Column: Contact Details -->
+        <div class="lg:col-span-5 flex flex-col">
+          <div class="glass-card h-full p-8 rounded-3xl border border-white/10 flex flex-col justify-between bg-[#12141C]">
+            <div class="flex flex-col gap-4">
+              <h3 class="font-bebas text-3xl text-white tracking-wide">CONTACT DETAILS</h3>
+              <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">Reach out for freelance project bookings, website redesign audits, or strategic digital marketing consultation.</p>
+
+              <div class="space-y-4 pt-2">
+                <a href="mailto:${personalInfo.email}" class="flex items-center gap-4 p-4 rounded-2xl bg-[#0A0B0E] border border-white/10 hover:border-white/30 transition-colors group">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white shrink-0">✉</div>
+                  <div class="min-w-0">
+                    <div class="text-[11px] text-gray-400 font-medium">Email Address</div>
+                    <div class="text-xs sm:text-sm font-semibold text-white truncate">${personalInfo.email}</div>
+                  </div>
+                </a>
+
+                <a href="${personalInfo.whatsapp}" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-[#0A0B0E] border border-white/10 hover:border-white/30 transition-colors group">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white shrink-0">📞</div>
+                  <div>
+                    <div class="text-[11px] text-gray-400 font-medium">Phone / WhatsApp</div>
+                    <div class="text-xs sm:text-sm font-semibold text-white">${personalInfo.phone}</div>
+                  </div>
+                </a>
+
+                <div class="flex items-center gap-4 p-4 rounded-2xl bg-[#0A0B0E] border border-white/10">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white shrink-0">📍</div>
+                  <div>
+                    <div class="text-[11px] text-gray-400 font-medium">Location</div>
+                    <div class="text-xs sm:text-sm font-semibold text-white">${personalInfo.location}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-white/10">
+              <span class="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-3">Connect on Social Platforms</span>
+              <div class="flex items-center gap-3">
+                <a href="${personalInfo.linkedin}" target="_blank" class="p-3 rounded-xl bg-[#0A0B0E] border border-white/10 text-gray-300 hover:text-white transition-all text-xs font-semibold">LinkedIn</a>
+                <a href="${personalInfo.instagram}" target="_blank" class="p-3 rounded-xl bg-[#0A0B0E] border border-white/10 text-gray-300 hover:text-white transition-all text-xs font-semibold">Instagram</a>
+                <a href="${personalInfo.website}" target="_blank" class="p-3 rounded-xl bg-[#0A0B0E] border border-white/10 text-gray-300 hover:text-white transition-all text-xs font-semibold">Website</a>
+              </div>
+            </div>
           </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Phone / WhatsApp Number</label>
-            <input type="tel" name="phone" required placeholder="+91 98765 43210" class="w-full p-3.5 rounded-xl bg-[#0A0B0E] border border-white/10 text-white text-xs">
+        </div>
+
+        <!-- Right Column: Direct Message Form -->
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="glass-card h-full p-8 rounded-3xl border border-white/10 flex flex-col justify-between bg-[#12141C]">
+            <div>
+              <h3 class="font-bebas text-3xl text-white tracking-wide mb-6">SEND A DIRECT MESSAGE</h3>
+
+              <form onsubmit="event.preventDefault(); window.open('https://wa.me/919539933265?text=' + encodeURIComponent('Direct Inquiry from Website\\nName: ' + this.name.value + '\\nEmail: ' + this.email.value + '\\nType: ' + this.projectType.value + '\\nMessage: ' + this.message.value), '_blank');" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Your Name</label>
+                    <input type="text" name="name" required placeholder="e.g. John Doe" class="w-full px-4 py-3.5 rounded-xl bg-[#0A0B0E] border border-white/10 text-white placeholder-gray-500 text-xs">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Email Address</label>
+                    <input type="email" name="email" required placeholder="e.g. john@example.com" class="w-full px-4 py-3.5 rounded-xl bg-[#0A0B0E] border border-white/10 text-white placeholder-gray-500 text-xs">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Project Type</label>
+                  <select name="projectType" class="w-full px-4 py-3.5 rounded-xl bg-[#0A0B0E] border border-white/10 text-white text-xs">
+                    <option value="Website Development">Website Design & Development</option>
+                    <option value="Website Redesign">Website Redesign & Audit</option>
+                    <option value="SEO Optimization">SEO & Keyword Optimization</option>
+                    <option value="Social Media Management">Social Media Strategy & Reels</option>
+                    <option value="Branding & Posters">Branding & Poster Design</option>
+                    <option value="Meta & Google Ads">Meta & Google Ad Support</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Project Message</label>
+                  <textarea name="message" rows="4" required placeholder="Tell me about your project goals, timelines, and requirements..." class="w-full px-4 py-3.5 rounded-xl bg-[#0A0B0E] border border-white/10 text-white placeholder-gray-500 text-xs resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-[#0B6CFF] to-[#00BFFF] text-xs uppercase tracking-wider">Submit Inquiry →</button>
+              </form>
+            </div>
           </div>
         </div>
-        <div>
-          <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Project Details / Message</label>
-          <textarea name="message" rows="4" required placeholder="Describe your project goals, timelines, and budget..." class="w-full p-3.5 rounded-xl bg-[#0A0B0E] border border-white/10 text-white text-xs"></textarea>
-        </div>
-        <button type="submit" class="w-full py-4 rounded-xl font-bold text-black bg-white text-xs uppercase tracking-wider">Send Message & WhatsApp →</button>
-      </form>
+
+      </div>
     </div>
   </section>
   ${getHtmlFooter()}`;
