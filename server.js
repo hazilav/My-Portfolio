@@ -1059,12 +1059,13 @@ function renderCategoryPage(slug) {
   ${getHtmlFooter()}`;
 }
 
-const server = http.createServer((req, res) => {
-  const url = req.url;
+const requestHandler = (req, res) => {
+  const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const url = parsedUrl.pathname;
 
   // Handle Static Files
-  if (url.startsWith("/images/")) {
-    const filePath = path.join(__dirname, "public", url);
+  if (url.startsWith("/images/") || url === "/favicon.ico") {
+    const filePath = path.join(PUBLIC_DIR, url.replace("/images/", "images/"));
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || "application/octet-stream";
 
@@ -1085,26 +1086,31 @@ const server = http.createServer((req, res) => {
     const slug = url.substring(7);
     const html = renderCategoryPage(slug);
     if (html) {
-      res.writeHead(200, { "Content-Type": "text/html" });
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       res.end(html);
       return;
     }
   }
 
   // Default Home Page
-  if (url === "/" || url.startsWith("/#")) {
-    res.writeHead(200, { "Content-Type": "text/html" });
+  if (url === "/" || url === "/index.html") {
+    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end(renderHomePage());
     return;
   }
 
-  res.writeHead(404, { "Content-Type": "text/html" });
-  res.end(`<h1>404 Not Found</h1><p><a href="/">Return Home</a></p>`);
-});
+  res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+  res.end(`<!DOCTYPE html>\n<html>\n<head><title>404 Not Found</title></head>\n<body>\n<h1>404 Not Found</h1>\n<p><a href="/">Return Home</a></p>\n</body>\n</html>`);
+};
 
-server.listen(PORT, () => {
-  console.log(`\n==================================================`);
-  console.log(`🚀 Muhammed Hazil AV Portfolio Website is LIVE!`);
-  console.log(`👉 Access URL: http://localhost:${PORT}`);
-  console.log(`==================================================\n`);
-});
+if (require.main === module) {
+  const server = http.createServer(requestHandler);
+  server.listen(PORT, () => {
+    console.log(`\n==================================================`);
+    console.log(`🚀 Muhammed Hazil AV Portfolio Website is LIVE!`);
+    console.log(`👉 Access URL: http://localhost:${PORT}`);
+    console.log(`==================================================\n`);
+  });
+}
+
+module.exports = requestHandler;
