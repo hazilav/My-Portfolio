@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
+import Image from "next/image";
 import { personalInfo } from "@/data/resumeData";
 
 export default function FloatingWhatsapp() {
@@ -10,9 +10,15 @@ export default function FloatingWhatsapp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-40 p-4 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 group"
+      className="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 group flex items-center justify-center"
     >
-      <MessageCircle className="w-7 h-7 fill-current" />
+      <Image
+        src="/images/whatsapp-icon.png"
+        alt="WhatsApp"
+        width={32}
+        height={32}
+        className="w-8 h-8 object-contain"
+      />
       {/* Tooltip on hover */}
       <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-lg bg-[#0D1117] text-xs font-semibold text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl">
         Chat on WhatsApp

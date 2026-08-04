@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight, MessageSquare, MessageCircle } from "lucide-react";
 import { personalInfo } from "@/data/resumeData";
@@ -102,7 +103,13 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-md shadow-[#25D366]/20 hover:shadow-lg hover:shadow-[#25D366]/40 transition-all duration-300"
           >
-            <MessageCircle className="w-4 h-4 fill-current text-white" />
+            <Image
+              src="/images/whatsapp-icon.png"
+              alt="WhatsApp"
+              width={20}
+              height={20}
+              className="w-5 h-5 object-contain shrink-0"
+            />
             <span>WhatsApp</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
@@ -149,7 +156,13 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold text-center shadow-md"
                 >
-                  <MessageCircle className="w-4 h-4 fill-current text-white" />
+                  <Image
+                    src="/images/whatsapp-icon.png"
+                    alt="WhatsApp"
+                    width={20}
+                    height={20}
+                    className="w-5 h-5 object-contain"
+                  />
                   <span>WhatsApp</span>
                 </a>
               </div>
