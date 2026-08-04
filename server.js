@@ -664,6 +664,128 @@ function renderHomePage() {
     </div>
   </section>
 
+  <!-- Skills, Experience & Education Section (Positioned After Services) -->
+  <section id="skills-experience" class="py-24 bg-[#0A0B0E] border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Core Skills -->
+      <div class="mb-20">
+        <div class="mb-8">
+          <h3 class="font-bebas text-4xl text-white tracking-wide">CORE SKILLS & TECH STACK</h3>
+          <p class="text-xs sm:text-sm text-gray-400">Categorized capabilities across development, marketing, and creative tools.</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl border border-white/10 bg-[#12141C]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            ${skillCategories[0].skills.map(s => `
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#05070B] border border-white/10 text-sm text-gray-200">
+                <span class="text-[#00BFFF]">✓</span>
+                <span>${s}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="mb-20">
+        <div class="mb-8">
+          <h3 class="font-bebas text-4xl text-white tracking-wide">CERTIFICATIONS & CREDENTIALS</h3>
+          <p class="text-xs sm:text-sm text-gray-400">Industry certifications in Analytics, Search Ads, Video Ads, SEO, and Content Strategy.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
+            <div>
+              <h4 class="text-sm font-bold text-white">Google Analytics Certification</h4>
+              <span class="text-xs text-gray-400">Google</span>
+            </div>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+          </div>
+          <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
+            <div>
+              <h4 class="text-sm font-bold text-white">Google Ads Search Certification</h4>
+              <span class="text-xs text-gray-400">Google</span>
+            </div>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+          </div>
+          <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
+            <div>
+              <h4 class="text-sm font-bold text-white">Google Ads Video Certification</h4>
+              <span class="text-xs text-gray-400">Google</span>
+            </div>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+          </div>
+          <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
+            <div>
+              <h4 class="text-sm font-bold text-white">SEMrush SEO & Research</h4>
+              <span class="text-xs text-gray-400">SEMrush</span>
+            </div>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+          </div>
+          <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
+            <div>
+              <h4 class="text-sm font-bold text-white">HubSpot Content Marketing</h4>
+              <span class="text-xs text-gray-400">HubSpot</span>
+            </div>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+          </div>
+          <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
+            <div>
+              <h4 class="text-sm font-bold text-white">One Million Prompters</h4>
+              <span class="text-xs text-gray-400">Prompter Certification</span>
+            </div>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">July 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience & Education -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-7">
+          <h3 class="font-bebas text-4xl text-white tracking-wide mb-8">💼 WORK EXPERIENCE</h3>
+          <div class="space-y-6">
+            <div class="glass-card p-6 rounded-2xl border border-white/10 bg-[#12141C]">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="text-lg font-bold text-white">Freelance / Project-Based Developer & Marketer</h4>
+                <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full">2025 – 2026</span>
+              </div>
+              <div class="text-xs text-gray-400 mb-3">Remote Clients</div>
+              <p class="text-xs text-gray-300 mb-3">Developed and redesigned client websites with responsive structure and optimized UX. Managed brand social accounts and Meta/Google Ads.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border border-white/10 bg-[#12141C]">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="text-lg font-bold text-white">Digital Marketing Intern</h4>
+                <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full">Jun 2025</span>
+              </div>
+              <div class="text-xs text-gray-400 mb-3">Quadcubes Digital Marketing Agency, Calicut</div>
+              <p class="text-xs text-gray-300 mb-3">Conducted in-depth SEO research and keyword analysis, created social media content calendars, and prepared analytics reports.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <h3 class="font-bebas text-4xl text-white tracking-wide mb-8">🎓 EDUCATION & ACADEMICS</h3>
+          <div class="space-y-6">
+            <div class="glass-card p-6 rounded-2xl border border-white/10 bg-[#12141C]">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="text-base font-bold text-white">Certificate in Digital Marketing</h4>
+                <span class="text-xs text-gray-400">Sep 2025</span>
+              </div>
+              <div class="text-xs text-[#00BFFF]">CDA Academy, Calicut</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border border-white/10 bg-[#12141C]">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="text-base font-bold text-white">Plus Two — Science</h4>
+                <span class="text-xs text-gray-400">Jun 2022</span>
+              </div>
+              <div class="text-xs text-[#00BFFF]">GVHSS Chirakkara, Thalassery</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="py-24 bg-[#0A0B0E] border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
