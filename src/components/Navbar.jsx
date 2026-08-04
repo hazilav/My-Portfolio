@@ -100,7 +100,7 @@ export default function Navbar() {
             href={personalInfo.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#0B6CFF] to-[#00BFFF] hover:shadow-glow transition-all duration-300"
+            className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-md shadow-[#25D366]/20 hover:shadow-lg hover:shadow-[#25D366]/40 transition-all duration-300"
           >
             <MessageCircle className="w-4 h-4 fill-current text-white" />
             <span>WhatsApp</span>
@@ -147,7 +147,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-[#0B6CFF] to-[#00BFFF] text-white font-semibold text-center shadow-glow"
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold text-center shadow-md"
                 >
                   <MessageCircle className="w-4 h-4 fill-current text-white" />
                   <span>WhatsApp</span>
