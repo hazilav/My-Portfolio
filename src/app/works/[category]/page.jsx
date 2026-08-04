@@ -20,8 +20,8 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import LightboxModal from "@/components/LightboxModal";
 
 export default function CategoryWorkPage({ params }) {
-  const { category: slug } = params;
-  const categoryData = worksCategories.find((cat) => cat.slug === slug);
+  const slug = params && typeof params.then === "function" ? (params.category || "") : (params?.category || "");
+  const categoryData = worksCategories.find((cat) => cat.slug === slug || cat.slug === params?.category);
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState({ src: "", alt: "", title: "", desc: "" });
