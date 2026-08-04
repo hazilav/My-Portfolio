@@ -364,34 +364,48 @@ function getHtmlHeader(pageTitle, pageDescription, canonicalPath = "") {
 
   return `<!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <!-- Primary Meta Tags -->
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="0MmCLZ7NJHge4kl2RJrq4Ue_DmggljKiMxcbp-eU9jA" />
+
+  <!-- Title -->
   <title>${metaTitle}</title>
-  <meta name="title" content="${metaTitle}">
-  <meta name="description" content="${metaDesc}">
-  <meta name="keywords" content="Muhammed Hazil AV, Digital Marketer Kerala, Website Developer Thalassery, SMM Specialist, WordPress Redesign, SEO Optimization, Meta Ads Specialist, Google Ads Calicut, Creative Web Developer India">
-  <meta name="author" content="${personalInfo.name}">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="${canonicalUrl}">
 
-  <!-- OpenGraph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="${canonicalUrl}">
-  <meta property="og:title" content="${metaTitle}">
-  <meta property="og:description" content="${metaDesc}">
-  <meta property="og:image" content="${avatarUrl}">
-  <meta property="og:site_name" content="${personalInfo.name}">
-  <meta property="og:locale" content="en_US">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/images/whatsapp-icon.png" type="image/x-icon" />
+  <link rel="icon" href="/images/whatsapp-icon.png" type="image/x-icon" />
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="${canonicalUrl}">
-  <meta name="twitter:title" content="${metaTitle}">
-  <meta name="twitter:description" content="${metaDesc}">
-  <meta name="twitter:image" content="${avatarUrl}">
+  <!-- Meta Description -->
+  <meta name="description" content="${metaDesc}" />
+  <meta name="twitter:description" content="${metaDesc}" />
+  <meta property="og:description" content="${metaDesc}" />
+
+  <!-- Title Meta -->
+  <meta name="twitter:title" content="${metaTitle}" />
+  <meta property="og:title" content="${metaTitle}" />
+
+  <!-- Keywords -->
+  <meta name="keywords" content="Muhammed Hazil AV, Digital Marketer Kerala, Website Developer Thalassery, SMM Specialist, WordPress Redesign, SEO Optimization, Meta Ads Specialist, Google Ads Calicut, Creative Web Developer India" />
+
+  <!-- Image or Logo -->
+  <meta name="image" content="${avatarUrl}" />
+  <meta name="twitter:image:src" content="${avatarUrl}" />
+  <meta property="og:image" content="${avatarUrl}" />
+
+  <!-- URL & Canonical -->
+  <link rel="canonical" href="${canonicalUrl}" />
+  <meta property="og:url" content="${canonicalUrl}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="${personalInfo.name}" />
+
+  <!-- Author & Robots -->
+  <meta name="author" content="${personalInfo.name}" />
+  <meta name="robots" content="index, follow" />
 
   <!-- Schema.org JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -400,9 +414,9 @@ ${JSON.stringify(jsonLd, null, 2)}
 
   <!-- Tailwind CSS & Google Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script>
     tailwind.config = {
