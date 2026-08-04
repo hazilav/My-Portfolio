@@ -55,6 +55,74 @@ const stats = [
   { label: "PageSpeed & UX Score", value: "98%", detail: "Fast, Responsive & Conversion-Focused" },
 ];
 
+const skillCategories = [
+  {
+    title: "Development & Web",
+    skills: [
+      "WordPress & Elementor Development",
+      "Vibe Coding & AI Workflows",
+      "HTML5, CSS3, JavaScript (ES6+)",
+      "Next.js & React Basics",
+      "Responsive UI/UX Web Design",
+      "Website Speed & Core Web Vitals Optimization",
+      "Domain, Hosting & DNS Management",
+    ],
+  },
+  {
+    title: "Digital Marketing & SEO",
+    skills: [
+      "Search Engine Optimization (SEO On-Page & Technical)",
+      "Social Media Marketing (SMM & Brand Strategy)",
+      "Meta Ads (Facebook & Instagram Campaign Setup)",
+      "Google Ads (Search & Video Campaign Support)",
+      "Keyword Research & Search Intent Mapping",
+      "Google Analytics 4 & Search Console",
+      "SEMrush Competitive Intelligence",
+    ],
+  },
+  {
+    title: "Design & Creative Tools",
+    skills: [
+      "Adobe Photoshop (Ad Banners & Graphics)",
+      "Adobe Illustrator (Posters & Vector Assets)",
+      "Canva Pro (Social Media Content Suites)",
+      "Video Reel Editing (CapCut & Premiere Basics)",
+      "AI Prompt Engineering (Midjourney & ChatGPT)",
+    ],
+  },
+];
+
+const certifications = [
+  { title: "Google Analytics Certification", issuer: "Google", date: "Sep 2025" },
+  { title: "Google Ads Search Certification", issuer: "Google", date: "Sep 2025" },
+  { title: "Google Ads Video Certification", issuer: "Google", date: "Sep 2025" },
+  { title: "SEMrush SEO & Research", issuer: "SEMrush", date: "Sep 2025" },
+  { title: "HubSpot Content Marketing", issuer: "HubSpot", date: "Sep 2025" },
+  { title: "One Million Prompters", issuer: "Prompter Certification", date: "July 2026" },
+];
+
+const workExperience = [
+  {
+    role: "Freelance / Project-Based Developer & Marketer",
+    company: "Remote Clients",
+    period: "2025 – 2026",
+    description: "Developed and redesigned client websites with responsive structure and optimized UX. Managed brand social accounts and Meta/Google Ads.",
+    highlights: ["Custom site builds", "Social campaign execution", "Ad creatives"],
+  },
+  {
+    role: "Digital Marketing Intern",
+    company: "Quadcubes Digital Marketing Agency, Calicut",
+    period: "Jun 2025",
+    description: "Conducted in-depth SEO research and keyword analysis, created social media content calendars, and prepared analytics reports.",
+    highlights: ["SEO audits", "Content calendars", "Analytics tracking"],
+  },
+];
+
+const education = [
+  { degree: "Certificate in Digital Marketing", institution: "CDA Academy, Calicut", year: "Sep 2025" },
+  { degree: "Plus Two — Science", institution: "GVHSS Chirakkara, Thalassery", year: "Jun 2022" },
+];
+
 const worksCategories = [
   {
     slug: "social-media",
