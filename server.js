@@ -498,26 +498,9 @@ function renderHomePage() {
           <span class="text-gray-300">DEVELOPER</span> & MARKETER
         </h2>
 
-        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 max-w-md">
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-md">
           Digital marketer and website developer skilled in building responsive custom web platforms, social media campaigns, and data-driven growth strategies across digital channels.
         </p>
-
-        <!-- Action Link -->
-        <div class="mb-6">
-          <a href="/#works" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-gray-300 transition-colors">
-            <span>⚙ Explore Projects</span>
-          </a>
-        </div>
-
-        <!-- Mini Project Thumbnail Cards -->
-        <div class="flex items-center gap-3">
-          <a href="/works/web-design" class="group relative w-24 h-16 rounded-xl overflow-hidden border border-white/10 bg-[#12141C]">
-            <img src="/images/web-design.jpg" alt="Web Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 opacity-70 group-hover:opacity-100">
-          </a>
-          <a href="/works/social-media" class="group relative w-24 h-16 rounded-xl overflow-hidden border border-white/10 bg-[#12141C]">
-            <img src="/images/social-media.jpg" alt="Social Media Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 opacity-70 group-hover:opacity-100">
-          </a>
-        </div>
       </div>
 
       <!-- CENTER COLUMN -->
@@ -543,13 +526,9 @@ function renderHomePage() {
             <span class="text-xs text-gray-400 font-medium">Experience</span>
             <span class="font-bebas text-2xl text-white">1+ Yr</span>
           </div>
-          <div class="flex items-center justify-between border-b border-white/5 pb-2">
+          <div class="flex items-center justify-between">
             <span class="text-xs text-gray-400 font-medium">Client Projects</span>
             <span class="font-bebas text-2xl text-white">10+</span>
-          </div>
-          <div class="flex items-center justify-between">
-            <span class="text-xs text-gray-400 font-medium">Core Stack</span>
-            <span class="text-xs font-bold text-gray-200">Next.js & WordPress</span>
           </div>
         </div>
 

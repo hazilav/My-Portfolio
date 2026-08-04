@@ -46,40 +46,9 @@ export default function Hero() {
             <span className="text-gray-200">DEVELOPER</span> & MARKETER
           </h2>
 
-          <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 max-w-md">
+          <p className="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-md">
             Digital marketer and website developer skilled in building responsive custom web platforms, social media campaigns, and data-driven growth strategies across digital channels.
           </p>
-
-          {/* Action Link */}
-          <div className="mb-6">
-            <Link
-              href="/#works"
-              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-gray-300 transition-colors"
-            >
-              <Compass className="w-4 h-4 text-gray-400" />
-              <span>Explore Projects</span>
-            </Link>
-          </div>
-
-          {/* Mini Project Thumbnail Cards */}
-          <div className="flex items-center gap-3">
-            <Link href="/works/web-design" className="group relative w-24 h-16 rounded-xl overflow-hidden border border-white/10 bg-[#12141C]">
-              <Image
-                src="/images/web-design.jpg"
-                alt="Web Project"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-300 opacity-70 group-hover:opacity-100"
-              />
-            </Link>
-            <Link href="/works/social-media" className="group relative w-24 h-16 rounded-xl overflow-hidden border border-white/10 bg-[#12141C]">
-              <Image
-                src="/images/social-media.jpg"
-                alt="Social Media Project"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-300 opacity-70 group-hover:opacity-100"
-              />
-            </Link>
-          </div>
         </motion.div>
 
         {/* CENTER COLUMN: Large Headshot Portrait Overlapping Watermark */}
@@ -125,13 +94,9 @@ export default function Hero() {
               <span className="text-xs text-gray-400 font-medium">Experience</span>
               <span className="font-bebas text-2xl text-white">1+ Yr</span>
             </div>
-            <div className="flex items-center justify-between border-b border-white/5 pb-2">
+            <div className="flex items-center justify-between">
               <span className="text-xs text-gray-400 font-medium">Client Projects</span>
               <span className="font-bebas text-2xl text-white">10+</span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span class="text-xs text-gray-400 font-medium">Core Stack</span>
-              <span class="text-xs font-bold text-gray-200">Next.js & WordPress</span>
             </div>
           </div>
 
