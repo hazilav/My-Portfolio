@@ -99,7 +99,7 @@ export const education = [
     year: "Sep 2025",
   },
   {
-    degree: "Plus Two — Biology Science",
+    degree: "Plus Two — Science",
     institution: "GVHSS Chirakkara, Thalassery",
     year: "Jun 2022",
   },
