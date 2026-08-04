@@ -677,42 +677,42 @@ function renderHomePage() {
               <h4 class="text-sm font-bold text-white">Google Analytics Certification</h4>
               <span class="text-xs text-gray-400">Google</span>
             </div>
-            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">Sep 2025</span>
           </div>
           <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
             <div>
               <h4 class="text-sm font-bold text-white">Google Ads Search Certification</h4>
               <span class="text-xs text-gray-400">Google</span>
             </div>
-            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">Sep 2025</span>
           </div>
           <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
             <div>
               <h4 class="text-sm font-bold text-white">Google Ads Video Certification</h4>
               <span class="text-xs text-gray-400">Google</span>
             </div>
-            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">Sep 2025</span>
           </div>
           <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
             <div>
               <h4 class="text-sm font-bold text-white">SEMrush SEO & Research</h4>
               <span class="text-xs text-gray-400">SEMrush</span>
             </div>
-            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">Sep 2025</span>
           </div>
           <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
             <div>
               <h4 class="text-sm font-bold text-white">HubSpot Content Marketing</h4>
               <span class="text-xs text-gray-400">HubSpot</span>
             </div>
-            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">Sep 2025</span>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">Sep 2025</span>
           </div>
           <div class="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between bg-[#12141C]">
             <div>
               <h4 class="text-sm font-bold text-white">One Million Prompters</h4>
               <span class="text-xs text-gray-400">Prompter Certification</span>
             </div>
-            <span class="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">July 2026</span>
+            <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">July 2026</span>
           </div>
         </div>
       </div>
@@ -723,17 +723,17 @@ function renderHomePage() {
           <h3 class="font-bebas text-4xl text-white tracking-wide mb-8">💼 WORK EXPERIENCE</h3>
           <div class="space-y-6">
             <div class="glass-card p-6 rounded-2xl border border-white/10 bg-[#12141C]">
-              <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center justify-between gap-2 mb-2">
                 <h4 class="text-lg font-bold text-white">Freelance / Project-Based Developer & Marketer</h4>
-                <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full">2025 – 2026</span>
+                <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">2025 – 2026</span>
               </div>
               <div class="text-xs text-gray-400 mb-3">Remote Clients</div>
               <p class="text-xs text-gray-300 mb-3">Developed and redesigned client websites with responsive structure and optimized UX. Managed brand social accounts and Meta/Google Ads.</p>
             </div>
             <div class="glass-card p-6 rounded-2xl border border-white/10 bg-[#12141C]">
-              <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center justify-between gap-2 mb-2">
                 <h4 class="text-lg font-bold text-white">Digital Marketing Intern</h4>
-                <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full">Jun 2025</span>
+                <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">Jun 2025</span>
               </div>
               <div class="text-xs text-gray-400 mb-3">Quadcubes Digital Marketing Agency, Calicut</div>
               <p class="text-xs text-gray-300 mb-3">Conducted in-depth SEO research and keyword analysis, created social media content calendars, and prepared analytics reports.</p>
@@ -745,18 +745,18 @@ function renderHomePage() {
           <h3 class="font-bebas text-4xl text-white tracking-wide mb-8">🎓 EDUCATION & ACADEMICS</h3>
           <div class="space-y-6">
             <div class="glass-card p-6 rounded-2xl border border-white/10 bg-[#12141C]">
-              <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center justify-between gap-2 mb-2">
                 <h4 class="text-base font-bold text-white">Certificate in Digital Marketing</h4>
-                <span class="text-xs text-gray-400">Sep 2025</span>
+                <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">Sep 2025</span>
               </div>
-              <div class="text-xs text-[#00BFFF]">CDA Academy, Calicut</div>
+              <div class="text-xs text-gray-400 mt-1">CDA Academy, Calicut</div>
             </div>
             <div class="glass-card p-6 rounded-2xl border border-white/10 bg-[#12141C]">
-              <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center justify-between gap-2 mb-2">
                 <h4 class="text-base font-bold text-white">Plus Two — Science</h4>
-                <span class="text-xs text-gray-400">Jun 2022</span>
+                <span class="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">Jun 2022</span>
               </div>
-              <div class="text-xs text-[#00BFFF]">GVHSS Chirakkara, Thalassery</div>
+              <div class="text-xs text-gray-400 mt-1">GVHSS Chirakkara, Thalassery</div>
             </div>
           </div>
         </div>

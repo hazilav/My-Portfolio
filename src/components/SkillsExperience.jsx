@@ -91,16 +91,16 @@ export default function SkillsExperience() {
                 key={idx}
                 className="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between hover:border-[#0B6CFF]/40 transition-all bg-[#12141C]"
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B6CFF]/15 border border-[#0B6CFF]/30 flex items-center justify-center text-[#00BFFF]">
+                <div className="flex items-center gap-3 min-w-0 pr-2">
+                  <div className="w-10 h-10 rounded-xl bg-[#0B6CFF]/15 border border-[#0B6CFF]/30 flex items-center justify-center text-[#00BFFF] shrink-0">
                     <Award className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-white">{cert.title}</h4>
-                    <span className="text-xs text-gray-400">{cert.issuer}</span>
+                  <div className="min-w-0">
+                    <h4 className="text-sm font-bold text-white truncate">{cert.title}</h4>
+                    <span className="text-xs text-gray-400 block truncate">{cert.issuer}</span>
                   </div>
                 </div>
-                <span className="text-xs font-semibold text-[#00BFFF] bg-[#00BFFF]/10 px-2.5 py-1 rounded-full">
+                <span className="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">
                   {cert.date}
                 </span>
               </div>
@@ -128,7 +128,7 @@ export default function SkillsExperience() {
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <h4 className="text-lg font-bold text-white">{exp.role}</h4>
-                    <span className="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full">
+                    <span className="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">
                       {exp.period}
                     </span>
                   </div>
@@ -165,11 +165,13 @@ export default function SkillsExperience() {
                   className="glass-card p-6 rounded-2xl border border-white/10 flex flex-col justify-between bg-[#12141C]"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center justify-between gap-2 mb-2">
                       <h4 className="text-base font-bold text-white">{edu.degree}</h4>
-                      <span className="text-xs font-semibold text-gray-400">{edu.year}</span>
+                      <span className="text-xs font-semibold text-[#00BFFF] bg-[#0B6CFF]/15 px-3 py-1 rounded-full border border-[#00BFFF]/20 shrink-0">
+                        {edu.year}
+                      </span>
                     </div>
-                    <div className="text-xs text-[#00BFFF]">{edu.institution}</div>
+                    <div className="text-xs text-gray-400 mt-1">{edu.institution}</div>
                   </div>
                 </div>
               ))}
