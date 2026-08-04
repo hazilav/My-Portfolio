@@ -27,7 +27,6 @@ export const skillCategories = [
       "WordPress & Elementor",
       "Responsive Web Design",
       "Website Redesign & Audits",
-      "Code-Based Web Dev (HTML/CSS)",
       "Vibe Coding & AI Workflows",
       "UX/UI Optimization",
       "Canva, Photoshop & Illustrator",

@@ -7,7 +7,7 @@ import { personalInfo } from "@/data/resumeData";
 
 export const metadata = {
   title: `${personalInfo.name} — Digital Marketer & Website Developer`,
-  description: `${personalInfo.bio} Specialized in WordPress, Elementor, code-based web dev, SEO, SMM, and Meta/Google Ads.`,
+  description: `${personalInfo.bio} Specialized in WordPress, Elementor, SEO, SMM, and Meta/Google Ads.`,
   keywords: [
     "Muhammed Hazil AV",
     "Digital Marketer Kerala",
