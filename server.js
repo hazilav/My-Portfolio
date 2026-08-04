@@ -289,17 +289,121 @@ const services = [
   { id: "branding", title: "Branding & Poster Design", icon: "🎨", description: "Eye-catching visual assets, social promotional banners, event posters, and cohesive brand identity suites." },
 ];
 
-function getHtmlHeader(title) {
+function getHtmlHeader(pageTitle, pageDescription, canonicalPath = "") {
+  const metaTitle = pageTitle || `${personalInfo.name} — Digital Marketer & Website Developer`;
+  const metaDesc = pageDescription || `${personalInfo.bio} Specializing in WordPress, Elementor, SEO Optimization, SMM, and Meta/Google Ads.`;
+  const siteUrl = personalInfo.website || "https://hazilav.vercel.app";
+  const canonicalUrl = `${siteUrl}${canonicalPath}`;
+  const avatarUrl = `${siteUrl}${personalInfo.avatar}`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${siteUrl}/#person`,
+        "name": personalInfo.name,
+        "alternateName": "Muhammed Hazil",
+        "jobTitle": "Digital Marketer & Website Developer",
+        "description": personalInfo.bio,
+        "url": siteUrl,
+        "image": avatarUrl,
+        "sameAs": [personalInfo.whatsapp, "https://github.com/hazilav"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Thalassery",
+          "addressRegion": "Kerala",
+          "addressCountry": "India"
+        },
+        "knowsAbout": [
+          "Website Design & Development",
+          "WordPress Development",
+          "Elementor",
+          "SEO Optimization",
+          "Social Media Marketing (SMM)",
+          "Meta Ads",
+          "Google Ads",
+          "React & Next.js"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        "url": siteUrl,
+        "name": `${personalInfo.name} — Portfolio & Digital Services`,
+        "description": personalInfo.tagline,
+        "publisher": {
+          "@id": `${siteUrl}/#person`
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${siteUrl}/#service`,
+        "name": `${personalInfo.name} Digital Services`,
+        "url": siteUrl,
+        "image": avatarUrl,
+        "priceRange": "₹15,000 - ₹60,000+",
+        "telephone": "+919539933265",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Thalassery",
+          "addressRegion": "Kerala",
+          "addressCountry": "India"
+        },
+        "serviceType": [
+          "Website Design & Development",
+          "SEO Optimization & Audits",
+          "Social Media Content Creation",
+          "Website Redesign & UX Overhaul",
+          "Branding & Poster Design"
+        ]
+      }
+    ]
+  };
+
   return `<!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title}</title>
+
+  <!-- Primary Meta Tags -->
+  <title>${metaTitle}</title>
+  <meta name="title" content="${metaTitle}">
+  <meta name="description" content="${metaDesc}">
+  <meta name="keywords" content="Muhammed Hazil AV, Digital Marketer Kerala, Website Developer Thalassery, SMM Specialist, WordPress Redesign, SEO Optimization, Meta Ads Specialist, Google Ads Calicut, Creative Web Developer India">
+  <meta name="author" content="${personalInfo.name}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="${canonicalUrl}">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:title" content="${metaTitle}">
+  <meta property="og:description" content="${metaDesc}">
+  <meta property="og:image" content="${avatarUrl}">
+  <meta property="og:site_name" content="${personalInfo.name}">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="${canonicalUrl}">
+  <meta name="twitter:title" content="${metaTitle}">
+  <meta name="twitter:description" content="${metaDesc}">
+  <meta name="twitter:image" content="${avatarUrl}">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+${JSON.stringify(jsonLd, null, 2)}
+  </script>
+
+  <!-- Tailwind CSS & Google Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -350,7 +454,10 @@ function getHtmlHeader(title) {
         <a href="/#works" class="hover:text-white transition-colors">WORK COLLECTIONS</a>
         <a href="/#services" class="hover:text-white transition-colors">PORTFOLIO</a>
       </nav>
-      <a href="${personalInfo.whatsapp}" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-[#25D366] hover:bg-[#20ba5a] hover:shadow-lg transition-all flex items-center gap-1.5"><span>WHATSAPP</span> ↗</a>
+      <a href="${personalInfo.whatsapp}" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-[#25D366] hover:bg-[#20ba5a] hover:shadow-lg transition-all flex items-center gap-1.5">
+        <img src="/images/whatsapp-icon.png" alt="WhatsApp" width="20" height="20" class="w-5 h-5 object-contain">
+        <span>WhatsApp ↗</span>
+      </a>
     </div>
   </header>
 `;
