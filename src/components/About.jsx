@@ -48,61 +48,42 @@ export default function About() {
           </p>
         </div>
 
-        {/* Two-Column Top Bio Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          
-          {/* Left Column: Image & Location Card */}
-          <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="relative w-full max-w-md glass-card p-4 rounded-3xl border border-white/10 shadow-xl">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-[#0D1117]">
-                <Image
-                  src={personalInfo.avatar}
-                  alt={personalInfo.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 400px"
-                  className="object-cover"
-                />
-              </div>
+        {/* Text-Only Bio & 4 Stat Cards Layout */}
+        <div className="max-w-4xl mx-auto flex flex-col gap-6 text-center items-center mb-20">
+          <h3 className="font-bebas text-3xl sm:text-4xl text-white tracking-wide">
+            BIO & PROFESSIONAL PERSPECTIVE
+          </h3>
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl">
+            {personalInfo.bio}
+          </p>
+          <p className="text-gray-400 text-sm leading-relaxed max-w-3xl">
+            With hands-on experience in WordPress & Elementor site development, code-based website building, and AI-assisted workflows, I create websites that don't just look stunning but convert visitors into customers.
+          </p>
 
-              {/* Location Badge */}
-              <div className="flex items-center justify-between px-3 py-2 bg-[#05070B] rounded-xl border border-white/10 text-xs text-gray-300">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#00BFFF]" />
-                  <span>{personalInfo.location}</span>
-                </div>
-                <div className="text-emerald-400 font-semibold flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Open for Projects</span>
-                </div>
-              </div>
+          {/* Location & Availability Badge */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-6 px-6 py-3 bg-[#0D1117] rounded-2xl border border-white/10 text-xs text-gray-300 my-2">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-[#00BFFF]" />
+              <span class="font-medium">{personalInfo.location}</span>
+            </div>
+            <div className="text-emerald-400 font-semibold flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Available for Freelance & Client Contracts</span>
             </div>
           </div>
 
-          {/* Right Column: Bio & 4 Stat Cards */}
-          <div className="lg:col-span-7 flex flex-col gap-6">
-            <h3 className="font-bebas text-3xl sm:text-4xl text-white tracking-wide">
-              BIO & PROFESSIONAL PERSPECTIVE
-            </h3>
-            <p className="text-gray-300 text-base leading-relaxed">
-              {personalInfo.bio}
-            </p>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              With hands-on experience in WordPress & Elementor site development, code-based website building, and AI-assisted workflows, I create websites that don't just look stunning but convert visitors into customers.
-            </p>
-
-            {/* 4 Stat Cards Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
-              {stats.map((stat, idx) => (
-                <div
-                  key={idx}
-                  className="glass-card p-4 rounded-2xl border border-white/10 flex flex-col items-start bg-[#12141C]"
-                >
-                  <div className="font-bebas text-4xl text-white">{stat.value}</div>
-                  <div className="text-xs font-bold text-gray-200 mt-1">{stat.label}</div>
-                  <div className="text-[11px] text-gray-400 mt-0.5">{stat.detail}</div>
-                </div>
-              ))}
-            </div>
+          {/* 4 Stat Cards Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full pt-4">
+            {stats.map((stat, idx) => (
+              <div
+                key={idx}
+                className="glass-card p-5 rounded-2xl border border-white/10 flex flex-col items-center text-center bg-[#12141C]"
+              >
+                <div className="font-bebas text-4xl text-white">{stat.value}</div>
+                <div className="text-xs font-bold text-gray-200 mt-1">{stat.label}</div>
+                <div className="text-[11px] text-gray-400 mt-0.5">{stat.detail}</div>
+              </div>
+            ))}
           </div>
         </div>
 

@@ -586,6 +586,17 @@ function renderHomePage() {
         <h2 class="font-bebas text-6xl sm:text-7xl text-white tracking-wider">ABOUT <span class="text-gray-400">ME</span></h2>
       </div>
 
+      <div class="max-w-3xl mx-auto text-center mb-12 space-y-4">
+        <h3 class="font-bebas text-3xl text-white tracking-wide">BIO & PROFESSIONAL PERSPECTIVE</h3>
+        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">${personalInfo.bio}</p>
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">With hands-on experience in website design, social media management, SEO optimization, and digital advertising, I build responsive platforms and execute performance-driven marketing campaigns.</p>
+        
+        <div class="inline-flex items-center gap-6 px-6 py-2.5 bg-[#12141C] rounded-2xl border border-white/10 text-xs text-gray-300">
+          <span>📍 ${personalInfo.location}</span>
+          <span class="text-emerald-400 font-bold">● Available for Freelance & Client Contracts</span>
+        </div>
+      </div>
+
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         ${stats.map(s => `
           <div class="glass-card p-6 rounded-2xl text-center bg-[#12141C]">
