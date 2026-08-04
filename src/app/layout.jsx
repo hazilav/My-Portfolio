@@ -6,10 +6,7 @@ import { personalInfo } from "@/data/resumeData";
 
 export const metadata = {
   metadataBase: new URL(personalInfo.website || "https://hazilav.vercel.app"),
-  title: {
-    default: `${personalInfo.name} — Digital Marketer & Website Developer`,
-    template: `%s | ${personalInfo.name}`,
-  },
+  title: `${personalInfo.name} | Digital Marketer & Website Developer`,
   description: `${personalInfo.bio} Specializing in WordPress, Elementor, SEO Optimization, SMM, and Meta/Google Ads.`,
   keywords: [
     "Muhammed Hazil AV",
@@ -40,7 +37,7 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: `${personalInfo.name} — Portfolio & Digital Services`,
+    title: `${personalInfo.name} | Digital Marketer & Website Developer`,
     description: personalInfo.tagline,
     url: personalInfo.website,
     siteName: personalInfo.name,
@@ -57,7 +54,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${personalInfo.name} — Digital Marketer & Website Developer`,
+    title: `${personalInfo.name} | Digital Marketer & Website Developer`,
     description: personalInfo.tagline,
     images: [personalInfo.avatar],
   },
@@ -133,12 +130,53 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="0MmCLZ7NJHge4kl2RJrq4Ue_DmggljKiMxcbp-eU9jA" />
+
+        {/* Title */}
+        <title>{`${personalInfo.name} | Digital Marketer & Website Developer`}</title>
+
+        {/* Favicon */}
+        <link rel="shortcut icon" href="/images/whatsapp-icon.png" type="image/x-icon" />
+        <link rel="icon" href="/images/whatsapp-icon.png" type="image/x-icon" />
+
+        {/* Meta Description */}
+        <meta name="description" content={`${personalInfo.bio} Specializing in WordPress, Elementor, SEO Optimization, SMM, and Meta/Google Ads.`} />
+        <meta name="twitter:description" content={`${personalInfo.bio} Specializing in WordPress, Elementor, SEO Optimization, SMM, and Meta/Google Ads.`} />
+        <meta property="og:description" content={`${personalInfo.bio} Specializing in WordPress, Elementor, SEO Optimization, SMM, and Meta/Google Ads.`} />
+
+        {/* Title Meta */}
+        <meta name="twitter:title" content={`${personalInfo.name} | Digital Marketer & Website Developer`} />
+        <meta property="og:title" content={`${personalInfo.name} | Digital Marketer & Website Developer`} />
+
+        {/* Keywords */}
+        <meta name="keywords" content="Muhammed Hazil AV, Digital Marketer Kerala, Website Developer Thalassery, SMM Specialist, WordPress Redesign, SEO Optimization, Meta Ads Specialist, Google Ads Calicut, Creative Web Developer India" />
+
+        {/* Image or Logo */}
+        <meta name="image" content="https://hazilav.vercel.app/images/profile.png" />
+        <meta name="twitter:image:src" content="https://hazilav.vercel.app/images/profile.png" />
+        <meta property="og:image" content="https://hazilav.vercel.app/images/profile.png" />
+
+        {/* URL */}
+        <link rel="canonical" href="https://hazilav.vercel.app" />
+        <meta property="og:url" content="https://hazilav.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={personalInfo.name} />
+
+        {/* Schema.org JSON-LD Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema, null, 2) }}
         />
+
+        {/* Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-[#05070B] text-[#F5F5F5] antialiased selection:bg-[#0B6CFF] selection:text-white">
         <Navbar />
